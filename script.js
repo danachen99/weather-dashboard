@@ -1,16 +1,25 @@
 var cityName = "";
 var cityArray = [];
 
+
+function addBtns() {
+    $("#results").empty();
+    for (var i = 0; i < cityArray.length; i++) {
+        //grab from array of cities to create buttons in $("#result") area
+        //$("#results").append();
+    }
+}
+
 //add to cityArray from input value
 $("#search").on("click", function() {
     event.preventDefault();
     var search = $("#enterCity").val().trim();
     cityArray.push(search);
-    console.log(cityArray);
+    addBtns();
 });
 
 
-//selected city? ...grab value of selected button to search
+//selected city by id/class ...grab value of selected button to search
 $("").on("click", function() {
 
     var apiKey = "af2a8b1f2b24299811ace630f9553342";
@@ -25,6 +34,6 @@ $("").on("click", function() {
 });
 
 
+
 //use moment.js to get date 
 //create a function to make an ajax call for UV Index`
-//function to grab from array of cities to create buttons in $("#result") area
